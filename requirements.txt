@@ -1,0 +1,13 @@
+pandas==2.0.1
+scikit-learn==1.2.2
+joblib==1.2.0
+tensorflow==2.13.0rc0
+tensorflow-estimator==2.13.0rc0
+tensorflow-macos==2.13.0rc0
+mplfinance==0.12.9b7
+
+google-pasta==0.2.0
+stack-data==0.6.2
+ta==0.10.2
+tensorboard-data-server==0.7.0
+tzdata==2023.3
