@@ -1,6 +1,6 @@
 # Spec
 
-Having a set of CSV files in the `dataset` folder with the following structure:
+The task at hand involves a set of CSV files stored in the dataset folder. Each file has a specific structure, as shown below:
 
 ```
 time,open,high,low,close,volume,rsi
@@ -9,31 +9,28 @@ time,open,high,low,close,volume,rsi
 1609466400000,0.0047312,0.0047383,0.0047204,0.0047263,2457619.0,56.49069147000932
 ```
 
-We should train the model to recognize the climbing pattern
+The objective is to train a model that can recognize a specific pattern referred to as the "climbing pattern":
 
 ![Climbing pattern](./docs/pattern.png)
 
-Where the goal of the model is to detect a safest place to predict the up trend.
-
-Generally, if the model is able to recognize better patterns - it will be able to predict the up trend more accurately.
+The model's goal is to identify the safest place to predict an upward trend. By recognizing more accurate patterns, the model should improve its ability to predict upward trends.
 
 # Structure
-There is one file `dataset/DOGEUSDT.csv` as a sample training data. The model should be trained on the whole dataset (the entire folder) if nesseary. There is a list of symbols that are currently commented out.
+The dataset folder contains one file named DOGEUSDT.csv, which serves as a sample training dataset. If necessary, the model should be trained on the entire dataset within the folder. There is also a list of symbols that are currently commented out, potentially for future use.
 
-The dataset includes RSI (I feel like it can be helpful), however, any additional technical indicators can be added if necessary.
+The dataset includes the Relative Strength Index (RSI), which can be a helpful feature. Additionally, other technical indicators can be added if deemed necessary.
 
-To generate more data run `create_dataset.py`
-
+To generate more data, the create_dataset.py script can be executed.
 
 # Training
-The model should be saved to the disk
+The model should be saved to disk after training.
 
 # prediction
 
-Prediction specs are in `predict.py`
+The prediction specifications are outlined in predict.py:
 
-* Pull the latest data for a symbol
-* Predict the next 10 (if possible) candles and detect if there is an up trend
+* Retrieve the latest data for a given symbol.
+* Predict the next 10 candles (if possible) and detect if an upward trend is present.
 
 ```python
 def predict(dataset):
